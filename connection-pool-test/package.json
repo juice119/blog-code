@@ -1,0 +1,30 @@
+{
+  "name": "connection-pool-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "benchmark.js",
+  "scripts": {
+    "start": "node benchmark.js",
+    "up": "docker-compose up -d poolwithout poolwith",
+    "up:poolwithout": "docker-compose up -d poolwithout",
+    "up:poolwith": "docker-compose up -d poolwith",
+    "down": "docker-compose down poolwithout poolwith",
+    "down:poolwithout": "docker-compose stop poolwithout && docker-compose rm -f poolwithout",
+    "down:poolwith": "docker-compose stop poolwith && docker-compose rm -f poolwith",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.1.3",
+      "onFail": "download"
+    }
+  },
+  "type": "comm",
+  "dependencies": {
+    "pg": "^8.22.0"
+  }
+}
