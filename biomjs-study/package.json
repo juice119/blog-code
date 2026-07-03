@@ -1,0 +1,32 @@
+{
+	"name": "biomjs-study",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"start": "tsx src/index.ts",
+		"typecheck": "tsc --noEmit",
+		"format": "pnpm exec biome format --write",
+		"lint": "pnpm exec biome lint --write",
+		"check": "pnpm exec biome check --write",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.1.3",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.1",
+		"@types/node": "^26.0.1",
+		"tsx": "^4.22.4",
+		"typescript": "^6.0.3"
+	}
+}
