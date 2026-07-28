@@ -1,0 +1,26 @@
+{
+	"name": "promise-race",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/index.ts",
+	"scripts": {
+		"start": "node src/index.ts",
+		"check": "biome check --write .",
+		"typecheck": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.13.0",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.5",
+		"typescript": "^7.0.2"
+	}
+}
