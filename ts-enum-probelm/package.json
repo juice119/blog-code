@@ -1,0 +1,29 @@
+{
+	"name": "ts-enum-probelm",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/number_enum_size_problem.ts",
+	"scripts": {
+		"build": "esbuild src/number_enum_size_problem.ts --bundle --platform=node --format=esm --outfile=dist/number_enum_size_problem.js",
+		"start": "node src/number_enum_size_problem.ts",
+		"size": "zsh scripts/compare-size.sh",
+		"check": "biome check --write .",
+		"typecheck": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.13.0",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.5",
+		"esbuild": "^0.25.0",
+		"typescript": "^7.0.2"
+	}
+}

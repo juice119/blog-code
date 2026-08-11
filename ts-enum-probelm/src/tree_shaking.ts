@@ -1,0 +1,1 @@
+export enum TreeStatus { TODO = 'TODO', DONE = 'DONE' }
