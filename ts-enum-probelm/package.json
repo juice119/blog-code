@@ -4,11 +4,11 @@
 	"description": "",
 	"main": "src/number_enum_size_problem.ts",
 	"scripts": {
-		"build": "esbuild src/number_enum_size_problem.ts --bundle --platform=node --format=esm --outfile=dist/number_enum_size_problem.js",
+		"build": "tsc -p tsconfig.build.json",
 		"start": "node src/number_enum_size_problem.ts",
 		"size": "zsh scripts/compare-size.sh",
 		"check": "biome check --write .",
-		"typecheck": "tsc"
+		"typecheck": "tsc --noEmit"
 	},
 	"keywords": [],
 	"author": "",

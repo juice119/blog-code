@@ -6,10 +6,7 @@ export abstract class BaseEnum<T extends BaseEnum<T>> {
     Object.freeze(this);
   }
 
-  // NOTE: not `protected` — a `this: { map: ... }` structural type can't
-  // satisfy a protected member (TS treats protected as nominal, not
-  // structural). Kept internal by convention instead.
-  static map: Record<string, BaseEnum<any>>;
+  protected static readonly  enums: Record<string, BaseEnum<any>> = {};
 
   static getStatus<T extends BaseEnum<T>>(
     this: { map: Record<string, T> },

@@ -4,7 +4,7 @@ export class PaymentStatusEnum extends BaseEnum<PaymentStatusEnum> {
   static readonly PAID = new PaymentStatusEnum('PAID', '결제완료');
   static readonly CANCELLED = new PaymentStatusEnum('CANCELLED', '취소');
 
-  static map = {
+  static override enums = {
     PAID: PaymentStatusEnum.PAID,
     CANCELLED: PaymentStatusEnum.CANCELLED,
   };
@@ -17,11 +17,3 @@ export class PaymentStatusEnum extends BaseEnum<PaymentStatusEnum> {
     return this.value === 'PAID';
   }
 }
-
-export type PaymentStatusKey = 'PAID' | 'CANCELLED';
-
-// --- demo ---
-const status = PaymentStatusEnum.getStatus('PAID');
-console.log(status.label, status.isPaid()); // 결제완료 true
-console.log(PaymentStatusEnum.values().map((s) => s.value)); // ['PAID', 'CANCELLED']
-console.log(PaymentStatusEnum.PAID === status); // true, identity intact
